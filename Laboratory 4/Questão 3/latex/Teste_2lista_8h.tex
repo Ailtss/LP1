@@ -1,0 +1,61 @@
+\hypertarget{Teste_2lista_8h}{\section{Teste/lista.h File Reference}
+\label{Teste_2lista_8h}\index{Teste/lista.\-h@{Teste/lista.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+Include dependency graph for lista.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classNode}{Node$<$ T $>$}
+\item 
+class \hyperlink{classNode}{Node$<$ T $>$}
+\item 
+class \hyperlink{classListaLigada}{Lista\-Ligada$<$ T $>$}
+\item 
+class \hyperlink{classListaLigada}{Lista\-Ligada$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& \hyperlink{Teste_2lista_8h_a7329abfb8eb3a0002a8f4b0d480aea8e}{operator$<$$<$} (std\-::ostream \&, \hyperlink{classNode}{Node}$<$ T $>$ const \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& \hyperlink{Teste_2lista_8h_a52f4c31289f6602485e158cce534155b}{operator$<$$<$} (std\-::ostream \&, \hyperlink{classListaLigada}{Lista\-Ligada}$<$ T $>$ const \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{Teste_2lista_8h_a7329abfb8eb3a0002a8f4b0d480aea8e}{\index{Teste/lista.\-h@{Teste/lista.\-h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Teste/lista.h@{Teste/lista.\-h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf Node}$<$ T $>$ const \&}]{n}
+\end{DoxyParamCaption}
+)}}\label{Teste_2lista_8h_a7329abfb8eb3a0002a8f4b0d480aea8e}
+
+\begin{DoxyCode}
+64                                                          \{
+65     o << n.\hyperlink{classNode_ae7133548e1ffddfd6bab32e684094dbe}{valor};
+66     \textcolor{keywordflow}{return} o;
+67 \}
+\end{DoxyCode}
+\hypertarget{Teste_2lista_8h_a52f4c31289f6602485e158cce534155b}{\index{Teste/lista.\-h@{Teste/lista.\-h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Teste/lista.h@{Teste/lista.\-h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf Lista\-Ligada}$<$ T $>$ const \&}]{l}
+\end{DoxyParamCaption}
+)}}\label{Teste_2lista_8h_a52f4c31289f6602485e158cce534155b}
+
+\begin{DoxyCode}
+212                                                                  \{
+213     \textcolor{keyword}{auto} atual = l.\hyperlink{classListaLigada_a248027a0a05a7221fa718366db452fea}{cabeca};
+214     \textcolor{keywordflow}{while} (atual != l.\hyperlink{classListaLigada_afb8bf9675df9229a9b03e41fe584fafa}{cauda}) \{
+215         o << atual->getValor() << \textcolor{stringliteral}{" "};
+216         atual = atual->getNext();
+217     \}
+218     \textcolor{keywordflow}{return} o;
+219 \}\end{DoxyCode}

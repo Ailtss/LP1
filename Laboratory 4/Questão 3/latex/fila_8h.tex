@@ -1,0 +1,45 @@
+\hypertarget{fila_8h}{\section{fila.\-h File Reference}
+\label{fila_8h}\index{fila.\-h@{fila.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}circular.\-h\char`\"{}}\\*
+Include dependency graph for fila.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classfila}{fila$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Implementação da T\-A\-D Fila\-Circular que utiliza Herança para herdar os artifícios da Lista\-Cirular. \end{DoxyCompactList}\item 
+class \hyperlink{classfila}{fila$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em Implementação da T\-A\-D Fila\-Circular que utiliza Herança para herdar os artifícios da Lista\-Cirular. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\-::ostream \& \hyperlink{fila_8h_a6d615c31c76fbdb5fa5657a4c207c692}{operator$<$$<$} (std\-::ostream \&o, \hyperlink{classfila}{fila}$<$ T $>$ const \&l)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de inserção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{fila_8h_a6d615c31c76fbdb5fa5657a4c207c692}{\index{fila.\-h@{fila.\-h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fila.h@{fila.\-h}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\-::ostream \& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{o, }
+\item[{{\bf fila}$<$ T $>$ const \&}]{l}
+\end{DoxyParamCaption}
+)}}\label{fila_8h_a6d615c31c76fbdb5fa5657a4c207c692}
+
+
+Sobrecarga do operador de inserção. 
+
+
+\begin{DoxyCode}
+38                                                           \{
+39     \textcolor{keyword}{auto} atual = l.\hyperlink{classListaLigada_afb8bf9675df9229a9b03e41fe584fafa}{cauda}->getNext();
+40     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < l.\hyperlink{classListaLigada_a7cb56d42e0603821e0b8f8645ec55ba0}{tamanho}; i++) \{
+41         o << atual->getValor() << \textcolor{stringliteral}{" "};
+42         atual = atual->getNext();
+43     \}
+44     \textcolor{keywordflow}{return} o;
+45 \}
+\end{DoxyCode}
